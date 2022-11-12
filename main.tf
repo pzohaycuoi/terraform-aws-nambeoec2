@@ -2,8 +2,6 @@ module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  name = var.ec2_name
-
   ami                    = "ami-ebd02392"
   instance_type          = "t2.micro"
   key_name               = "user1"
@@ -12,6 +10,7 @@ module "ec2_instance" {
   subnet_id              = var.subnet
 
   tags = {
+    Project = var.project_name
     Provisioner = "Terraform"
   }
 }

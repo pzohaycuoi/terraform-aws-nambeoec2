@@ -8,7 +8,7 @@ variable "subnet" {
   type = string
 }
 
-variable "ec2_name" {
-  description = "ec2 instnance name"
+variable "project_name" {
+  description = "tag resources with project name for identify"
   type = string
 }
